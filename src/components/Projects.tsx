@@ -1,23 +1,18 @@
-import { ExternalLink, Leaf, Code } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import enerseaPreview from "@/assets/enersea-preview.png";
+import blackboxPreview from "@/assets/blackbox-preview.png";
 
 const projects = [
   {
     name: "EnerSea Foods",
     description: "Empresa de alimentación saludable dedicada a ofrecer productos nutritivos y sostenibles. Especializada en alimentos marinos y opciones saludables para un estilo de vida equilibrado.",
     url: "https://enerseafoods.com/",
-    icon: Leaf,
-    color: "text-green-600",
-    bgColor: "bg-green-50",
+    image: enerseaPreview,
   },
   {
     name: "Black Box Informática",
     description: "Negocio de desarrollo web especializado en crear soluciones digitales para pequeñas y grandes empresas. Desde sitios web corporativos hasta aplicaciones web complejas y sistemas personalizados.",
     url: "https://blackboxinformatica.es/",
-    icon: Code,
-    color: "text-primary",
-    bgColor: "bg-primary/10",
+    image: blackboxPreview,
   },
 ];
 
@@ -32,36 +27,27 @@ const Projects = () => {
 
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Card 
-              key={index} 
-              className="shadow-medium hover:shadow-glow transition-all duration-300 hover:-translate-y-1"
+            <a
+              key={index}
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block overflow-hidden rounded-lg border bg-card shadow-medium hover:shadow-glow transition-all duration-500"
             >
-              <CardHeader>
-                <div className={`w-12 h-12 ${project.bgColor} rounded-lg flex items-center justify-center mb-4`}>
-                  <project.icon className={`w-6 h-6 ${project.color}`} />
-                </div>
-                <CardTitle className="text-2xl">{project.name}</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
+              <div className="relative overflow-hidden aspect-video">
+                <img
+                  src={project.image}
+                  alt={`Preview de ${project.name}`}
+                  className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:rotate-2"
+                />
+              </div>
+              <div className="p-6 space-y-3">
+                <h3 className="text-2xl font-semibold text-foreground">{project.name}</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   {project.description}
                 </p>
-                <Button
-                  asChild
-                  className="w-full bg-gradient-primary hover:opacity-90 transition-opacity"
-                >
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2"
-                  >
-                    Visitar sitio web
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
-                </Button>
-              </CardContent>
-            </Card>
+              </div>
+            </a>
           ))}
         </div>
       </div>
