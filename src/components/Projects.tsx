@@ -1,5 +1,6 @@
 import enerseaPreview from "@/assets/enersea-preview.png";
 import blackboxPreview from "@/assets/blackbox-preview.png";
+import mensaPreview from "@/assets/mensa-preview.png";
 
 const projects = [
   {
@@ -14,6 +15,12 @@ const projects = [
     url: "https://blackboxinformatica.es/",
     image: blackboxPreview,
   },
+  {
+    name: "Miembro de Mensa Internacional",
+    description: "Mensa es una organización internacional sin ánimo de lucro que reúne a personas con un cociente intelectual en el percentil 98 o superior. Miembro activo desde 2025.",
+    url: "https://www.mensa.es/qr.php?_GaMhLe-9_thCvVO92BfB-hbwvqBQYtN5mbR3eoXb6z0vLxEsCNDxSXP7y0wqy0cFf-WVBrSmoGRbfGq80X9SXL1s_gOZNkHkCjd_qxyUZdAmkWnJ-O43qhqbUCUYengI-HA-b-AWA4tq-sbk_00ng==",
+    image: mensaPreview,
+  },
 ];
 
 const Projects = () => {
@@ -25,7 +32,7 @@ const Projects = () => {
         </h2>
         <div className="w-20 h-1 bg-gradient-accent mx-auto mb-12 rounded-full" />
 
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <a
               key={index}
