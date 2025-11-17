@@ -45,16 +45,16 @@ const Hero = () => {
               Teléfono
             </a>
           </div>
-        </div>
 
-        {/* Scroll indicator */}
-        <button
-          onClick={scrollToAbout}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce"
-          aria-label="Scroll to content"
-        >
-          <ArrowDown className="w-8 h-8 text-primary-foreground/70" />
-        </button>
+          {/* Scroll indicator */}
+          <button
+            onClick={scrollToAbout}
+            className="mt-12 animate-bounce"
+            aria-label="Scroll to content"
+          >
+            <ArrowDown className="w-8 h-8 text-primary-foreground/70" />
+          </button>
+        </div>
       </div>
     </section>
   );
