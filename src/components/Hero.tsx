@@ -2,8 +2,8 @@ import { ArrowDown } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
-  const scrollToAbout = () => {
-    document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+  const scrollToSection = (sectionId: string) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -32,23 +32,23 @@ const Hero = () => {
           </p>
           
           <div className="flex gap-4 justify-center flex-wrap">
-            <a
-              href="mailto:marcelroiggil@gmail.com"
+            <button
+              onClick={() => scrollToSection("about")}
               className="px-8 py-3 bg-accent text-accent-foreground rounded-lg font-semibold hover:shadow-glow transition-all duration-300 hover:scale-105"
             >
-              Contacto
-            </a>
-            <a
-              href="tel:+34608161320"
+              Sobre mí
+            </button>
+            <button
+              onClick={() => scrollToSection("contact")}
               className="px-8 py-3 bg-card/20 backdrop-blur-sm text-primary-foreground border-2 border-primary-foreground/30 rounded-lg font-semibold hover:bg-card/30 transition-all duration-300"
             >
-              Teléfono
-            </a>
+              Contacto
+            </button>
           </div>
 
           {/* Scroll indicator */}
           <button
-            onClick={scrollToAbout}
+            onClick={() => scrollToSection("about")}
             className="mt-12 animate-bounce"
             aria-label="Scroll to content"
           >
