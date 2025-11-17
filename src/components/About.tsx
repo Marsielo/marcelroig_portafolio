@@ -20,9 +20,10 @@ const About = () => {
                 <h3 className="text-xl font-semibold mb-2 text-foreground">Formación Académica</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Actualmente cursando 4º año de Ingeniería Informática e Ingeniería de 
-                  Sistemas de Telecomunicación con mención en Tecnologías de la Información. 
-                  Mi formación combina conocimientos avanzados en desarrollo de software, 
-                  sistemas de comunicación y arquitecturas tecnológicas modernas.
+                  Sistemas de Telecomunicación con mención en Tecnologías de la Información 
+                  en la Universidad Autónoma de Barcelona. Mi formación combina conocimientos 
+                  avanzados en desarrollo de software, sistemas de comunicación y arquitecturas 
+                  tecnológicas modernas.
                 </p>
               </div>
             </CardContent>
@@ -34,11 +35,10 @@ const About = () => {
                 <Lightbulb className="w-6 h-6 text-accent" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-foreground">Logros Destacados</h3>
+                <h3 className="text-xl font-semibold mb-2 text-foreground">Música</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Miembro de Mensa Internacional, la sociedad de alto coeficiente intelectual 
-                  más antigua y grande del mundo. Esta membresía refleja mi pasión por el 
-                  pensamiento crítico, la resolución de problemas complejos y el aprendizaje continuo.
+                  Pianista y vocalista desde pequeño, la música es mi mundo de belleza ordenada. 
+                  Amante de todo tipo de estilos y compositor de mis propias obras.
                 </p>
               </div>
             </CardContent>
@@ -50,9 +50,12 @@ const About = () => {
                 <MapPin className="w-6 h-6 text-secondary-foreground" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-foreground">Ubicación</h3>
+                <h3 className="text-xl font-semibold mb-2 text-foreground">Deporte</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Palau-solità i Plegamans, Barcelona, España
+                  Practicante de múltiples deportes y disciplinas, tratando de mantener una salud 
+                  física y mental con esfuerzo y rigor. De entre mis actividades más comunes están: 
+                  gimnasio y calistenia, boxeo y artes marciales, tenis, parkour y acrobacias, 
+                  resistencia (running, natación y ciclismo)...
                 </p>
               </div>
             </CardContent>
