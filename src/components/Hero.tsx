@@ -28,7 +28,7 @@ const Hero = () => {
             Estudiante de Ingeniería Informática y Sistemas de Telecomunicación
           </p>
           <p className="text-lg md:text-xl mb-8 text-primary-foreground/80 max-w-2xl mx-auto">
-            Emprendedor • Desarrollador Web • Miembro de Mensa Internacional
+            Erudito • Visionario • Artista
           </p>
           
           <div className="flex gap-4 justify-center flex-wrap">

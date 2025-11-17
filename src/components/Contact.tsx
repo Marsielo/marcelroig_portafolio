@@ -17,7 +17,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Ubicación",
-    value: "Palau-solità i Plegamans, Barcelona",
+    value: "08184 Palau-solità i Plegamans, Barcelona",
     href: null,
   },
 ];
