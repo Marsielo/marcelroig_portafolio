@@ -1,5 +1,11 @@
 import { GraduationCap, Music2, Dumbbell, Instagram, Linkedin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import profilePhoto from "@/assets/profile-photo.jpg";
 
 const About = () => {
@@ -15,11 +21,11 @@ const About = () => {
           {/* Profile Card */}
           <Card className="shadow-medium hover:shadow-glow transition-all duration-300">
             <CardContent className="p-6 flex flex-col md:flex-row items-center gap-6">
-              <div className="flex-shrink-0">
+              <div className="flex-shrink-0 overflow-hidden rounded-full w-32 h-32 border-4 border-primary/20">
                 <img 
                   src={profilePhoto} 
                   alt="Marcel Roig Gil" 
-                  className="w-32 h-32 rounded-full object-cover border-4 border-primary/20"
+                  className="w-full h-full object-cover scale-150"
                 />
               </div>
               <div className="flex-1 text-center md:text-left">
@@ -49,20 +55,59 @@ const About = () => {
           </Card>
 
           <Card className="shadow-medium hover:shadow-glow transition-all duration-300">
-            <CardContent className="p-6 flex items-start gap-4">
-              <div className="p-3 bg-primary/10 rounded-lg">
-                <GraduationCap className="w-6 h-6 text-primary" />
+            <CardContent className="p-6">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="p-3 bg-primary/10 rounded-lg">
+                  <GraduationCap className="w-6 h-6 text-primary" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold mb-2 text-foreground">Formación Académica</h3>
+                  <p className="text-sm text-muted-foreground">Universidad Autónoma de Barcelona</p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2 text-foreground">Formación Académica</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Actualmente cursando 4º año de Ingeniería Informática e Ingeniería de 
-                  Sistemas de Telecomunicación con mención en Tecnologías de la Información 
-                  en la Universidad Autónoma de Barcelona. Mi formación combina conocimientos 
-                  avanzados en desarrollo de software, sistemas de comunicación y arquitecturas 
-                  tecnológicas modernas.
-                </p>
-              </div>
+              
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="informatica">
+                  <AccordionTrigger className="text-left">
+                    <span className="font-medium">Grado en Ingeniería Informática<br />
+                    <span className="text-sm text-muted-foreground">(Mención en Tecnologías de la Información)</span></span>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <div className="space-y-2 pl-4">
+                      <h4 className="font-semibold text-sm text-primary mb-2">Competencias y Habilidades:</h4>
+                      <ul className="space-y-1 text-sm text-muted-foreground">
+                        <li>• Desarrollo de software y aplicaciones web</li>
+                        <li>• Arquitectura de sistemas y diseño de soluciones</li>
+                        <li>• Bases de datos y gestión de información</li>
+                        <li>• Algoritmos y estructuras de datos</li>
+                        <li>• Inteligencia artificial y machine learning</li>
+                        <li>• Seguridad informática y ciberseguridad</li>
+                        <li>• Sistemas operativos y redes de computadores</li>
+                      </ul>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="telecomunicacion">
+                  <AccordionTrigger className="text-left">
+                    <span className="font-medium">Grado en Ingeniería de Sistemas de Telecomunicación</span>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <div className="space-y-2 pl-4">
+                      <h4 className="font-semibold text-sm text-primary mb-2">Competencias y Habilidades:</h4>
+                      <ul className="space-y-1 text-sm text-muted-foreground">
+                        <li>• Sistemas de comunicaciones digitales y analógicas</li>
+                        <li>• Redes de telecomunicación y protocolos</li>
+                        <li>• Procesamiento digital de señales</li>
+                        <li>• Tecnologías inalámbricas y redes móviles</li>
+                        <li>• Internet de las cosas (IoT)</li>
+                        <li>• Sistemas electrónicos y microcontroladores</li>
+                        <li>• Gestión de proyectos tecnológicos</li>
+                      </ul>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </CardContent>
           </Card>
 
