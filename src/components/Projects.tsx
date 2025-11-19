@@ -1,6 +1,6 @@
 import enerseaPreview from "@/assets/enersea-preview.png";
 import blackboxPreview from "@/assets/blackbox-preview.png";
-import mensaPreview from "@/assets/mensa-preview.png";
+import parkourPreview from "@/assets/parkour-preview.png";
 
 const projects = [
   {
@@ -16,10 +16,10 @@ const projects = [
     image: blackboxPreview,
   },
   {
-    name: "Miembro de Mensa Internacional",
-    description: "Mensa es una organización internacional sin ánimo de lucro que reúne a personas con un cociente intelectual en el percentil 98 o superior. Miembro activo desde 2025.",
-    url: "https://www.mensa.es/qr.php?_GaMhLe-9_thCvVO92BfB-hbwvqBQYtN5mbR3eoXb6z0vLxEsCNDxSXP7y0wqy0cFf-WVBrSmoGRbfGq80X9SXL1s_gOZNkHkCjd_qxyUZdAmkWnJ-O43qhqbUCUYengI-HA-b-AWA4tq-sbk_00ng==",
-    image: mensaPreview,
+    name: "Asociación Juvenil Parkour Palau",
+    description: "Asociación sin ánimo de lucro dedicada a promover la filosofía saludable del arte del movimiento en jóvenes. Fomentando valores de superación, disciplina y trabajo en equipo a través del parkour.",
+    url: "https://www.instagram.com/parkourpalau/",
+    image: parkourPreview,
   },
 ];
 
@@ -41,11 +41,11 @@ const Projects = () => {
               rel="noopener noreferrer"
               className="group block overflow-hidden rounded-lg border bg-card shadow-medium hover:shadow-glow transition-all duration-500"
             >
-              <div className="relative overflow-hidden aspect-video">
+              <div className="relative overflow-hidden aspect-video bg-muted">
                 <img
                   src={project.image}
                   alt={`Preview de ${project.name}`}
-                  className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:rotate-2"
+                  className="w-full h-full object-cover object-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-2"
                 />
               </div>
               <div className="p-6 space-y-3">
