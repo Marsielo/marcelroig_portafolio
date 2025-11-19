@@ -1,25 +1,25 @@
-import enerseaPreview from "@/assets/enersea-preview.png";
-import blackboxPreview from "@/assets/blackbox-preview.png";
-import parkourPreview from "@/assets/parkour-preview.png";
+import enerseaLogo from "@/assets/enersea-logo.png";
+import blackboxLogo from "@/assets/blackbox-logo.png";
+import parkourLogo from "@/assets/parkour-logo.png";
 
 const projects = [
   {
     name: "EnerSea Foods",
     description: "Empresa de alimentación saludable dedicada a ofrecer productos nutritivos y sostenibles. Especializada en alimentos marinos y opciones saludables para un estilo de vida equilibrado.",
     url: "https://enerseafoods.com/",
-    image: enerseaPreview,
+    image: enerseaLogo,
   },
   {
     name: "Black Box Informática",
     description: "Negocio de desarrollo web especializado en crear soluciones digitales para pequeñas y grandes empresas. Desde sitios web corporativos hasta aplicaciones web complejas y sistemas personalizados.",
     url: "https://blackboxinformatica.es/",
-    image: blackboxPreview,
+    image: blackboxLogo,
   },
   {
     name: "Asociación Juvenil Parkour Palau",
     description: "Asociación sin ánimo de lucro dedicada a promover la filosofía saludable del arte del movimiento en jóvenes. Fomentando valores de superación, disciplina y trabajo en equipo a través del parkour.",
     url: "https://www.instagram.com/parkourpalau/",
-    image: parkourPreview,
+    image: parkourLogo,
   },
 ];
 
@@ -41,11 +41,11 @@ const Projects = () => {
               rel="noopener noreferrer"
               className="group block overflow-hidden rounded-lg border bg-card shadow-medium hover:shadow-glow transition-all duration-500"
             >
-              <div className="relative overflow-hidden aspect-video bg-muted">
+              <div className="relative overflow-hidden aspect-video bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center p-8">
                 <img
                   src={project.image}
-                  alt={`Preview de ${project.name}`}
-                  className="w-full h-full object-cover object-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-2"
+                  alt={`Logo de ${project.name}`}
+                  className="w-full h-full object-contain transition-all duration-500 group-hover:scale-110"
                 />
               </div>
               <div className="p-6 space-y-3">
