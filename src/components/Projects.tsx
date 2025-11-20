@@ -41,12 +41,14 @@ const Projects = () => {
               rel="noopener noreferrer"
               className="group block overflow-hidden rounded-lg border bg-card shadow-medium hover:shadow-glow transition-all duration-500"
             >
-              <div className="relative overflow-hidden aspect-video bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center p-8">
-                <img
-                  src={project.image}
-                  alt={`Logo de ${project.name}`}
-                  className="w-full h-full object-contain transition-all duration-500 group-hover:scale-110"
-                />
+              <div className="relative overflow-hidden flex items-center justify-center p-8 bg-gradient-to-br from-muted to-muted/50">
+                <div className="w-48 h-48 rounded-full overflow-hidden bg-background/80 flex items-center justify-center p-6 shadow-lg">
+                  <img
+                    src={project.image}
+                    alt={`Logo de ${project.name}`}
+                    className="w-full h-full object-contain transition-all duration-700 group-hover:rotate-[360deg] group-hover:scale-110"
+                  />
+                </div>
               </div>
               <div className="p-6 space-y-3">
                 <h3 className="text-2xl font-semibold text-foreground">{project.name}</h3>

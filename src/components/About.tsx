@@ -1,4 +1,4 @@
-import { Code, Radio, Music2, Dumbbell, Instagram, Linkedin } from "lucide-react";
+import { Laptop, Signal, Music2, Dumbbell, Instagram, Linkedin, Youtube } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import profilePhoto from "@/assets/profile-photo.jpg";
@@ -24,7 +24,8 @@ const About = () => {
                 />
               </div>
               <div className="flex-1 text-center md:text-left">
-                <h3 className="text-2xl font-semibold mb-3 text-foreground">Marcel Roig Gil</h3>
+                <h3 className="text-2xl font-semibold mb-1 text-foreground">Marcel Roig Gil</h3>
+                <p className="text-sm text-muted-foreground mb-3">21 años</p>
                 <div className="flex gap-4 justify-center md:justify-start">
                   <a
                     href="https://www.instagram.com/marseelroig/"
@@ -60,7 +61,7 @@ const About = () => {
                 <div className="space-y-6">
                   <div className="flex items-start gap-3">
                     <div className="p-3 bg-primary rounded-lg flex-shrink-0">
-                      <Code className="w-6 h-6 text-primary-foreground" />
+                      <Laptop className="w-6 h-6 text-primary-foreground" />
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold text-foreground">Grado en Ingeniería Informática</h4>
@@ -70,7 +71,7 @@ const About = () => {
                   
                   <Accordion type="single" collapsible className="w-full">
                     <AccordionItem value="informatica-skills" className="border-none">
-                      <AccordionTrigger className="text-sm font-medium hover:no-underline py-3 px-4 bg-primary/5 rounded-lg hover:bg-primary/10 transition-colors">
+                      <AccordionTrigger className="text-sm font-medium hover:no-underline py-3 px-4 bg-muted rounded-lg hover:bg-muted/80 transition-colors">
                         Competencias y habilidades
                       </AccordionTrigger>
                       <AccordionContent className="pt-4 space-y-4">
@@ -102,7 +103,7 @@ const About = () => {
                 <div className="space-y-6">
                   <div className="flex items-start gap-3">
                     <div className="p-3 bg-accent rounded-lg flex-shrink-0">
-                      <Radio className="w-6 h-6 text-accent-foreground" />
+                      <Signal className="w-6 h-6 text-accent-foreground" />
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold text-foreground">Grado en Ingeniería de Sistemas de Telecomunicación</h4>
@@ -111,7 +112,7 @@ const About = () => {
                   
                   <Accordion type="single" collapsible className="w-full">
                     <AccordionItem value="telecos-skills" className="border-none">
-                      <AccordionTrigger className="text-sm font-medium hover:no-underline py-3 px-4 bg-accent/5 rounded-lg hover:bg-accent/10 transition-colors">
+                      <AccordionTrigger className="text-sm font-medium hover:no-underline py-3 px-4 bg-muted rounded-lg hover:bg-muted/80 transition-colors">
                         Competencias y habilidades
                       </AccordionTrigger>
                       <AccordionContent className="pt-4 space-y-4">
@@ -150,7 +151,7 @@ const About = () => {
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-semibold mb-2 text-foreground">Música</h3>
-                <p className="text-muted-foreground leading-relaxed mb-3">
+                <p className="text-muted-foreground leading-relaxed mb-4">
                   Pianista y vocalista desde pequeño, la música es mi mundo de belleza ordenada. 
                   Amante de todo tipo de estilos y compositor de mis propias obras.
                 </p>
@@ -158,9 +159,10 @@ const About = () => {
                   href="https://www.youtube.com/@seasky13"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-accent hover:text-accent/80 font-medium transition-colors"
+                  className="inline-flex items-center gap-3 px-4 py-2.5 bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105"
                 >
-                  🎵 Canal de YouTube: SeaSky
+                  <Youtube className="w-5 h-5" />
+                  <span>Canal de YouTube: SeaSky</span>
                 </a>
               </div>
             </CardContent>
