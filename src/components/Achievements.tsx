@@ -1,11 +1,18 @@
-import mensaPreview from "@/assets/mensa-preview.png";
+import mensaCard from "@/assets/mensa-card.png";
+import conferencePreview from "@/assets/conference-preview.jpg";
 
 const achievements = [
   {
     name: "Miembro de Mensa Internacional",
     description: "Mensa es una organización internacional sin ánimo de lucro que reúne a personas con un cociente intelectual en el percentil 98 o superior. Miembro activo desde 2025.",
     url: "https://www.mensa.es/qr.php?_GaMhLe-9_thCvVO92BfB-hbwvqBQYtN5mbR3eoXb6z0vLxEsCNDxSXP7y0wqy0cFf-WVBrSmoGRbfGq80X9SXL1s_gOZNkHkCjd_qxyUZdAmkWnJ-O43qhqbUCUYengI-HA-b-AWA4tq-sbk_00ng==",
-    image: mensaPreview,
+    image: mensaCard,
+  },
+  {
+    name: "Ponente en conferencias universitarias",
+    description: "Universidades como ESADE o la UAB han contado conmigo para exponer mi conocimiento en diferentes áreas como la ciencia y tecnología, la innovación histórica y, como factor común, mis características reflexiones filosóficas y metafísicas.",
+    url: "https://www.linkedin.com/feed/update/urn:li:activity:7387424323676057600/?originTrackingId=aS4OYScx01hiHXDRk602%2Fg%3D%3D",
+    image: conferencePreview,
   },
 ];
 
