@@ -14,37 +14,44 @@ const About = () => {
 
         <div className="max-w-4xl mx-auto space-y-6">
           {/* Profile Card */}
-          <Card className="shadow-medium hover:shadow-glow transition-all duration-300">
-            <CardContent className="p-6 flex flex-col md:flex-row items-center gap-6">
-              <div className="flex-shrink-0 overflow-hidden rounded-full w-32 h-32 border-4 border-primary/20">
-                <img 
-                  src={profilePhoto} 
-                  alt="Marcel Roig Gil" 
-                  className="w-full h-full object-cover scale-150"
-                />
-              </div>
-              <div className="flex-1 text-center md:text-left">
-                <h3 className="text-2xl font-semibold mb-1 text-foreground">Marcel Roig Gil</h3>
-                <p className="text-sm text-muted-foreground mb-3">21 años</p>
-                <div className="flex gap-4 justify-center md:justify-start">
-                  <a
-                    href="https://www.instagram.com/marseelroig/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-lg hover:bg-primary/20 transition-colors"
-                  >
-                    <Instagram className="w-5 h-5 text-primary" />
-                    <span className="text-sm font-medium">Instagram</span>
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/marcel-roig-gil-490b51315"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 bg-accent/10 rounded-lg hover:bg-accent/20 transition-colors"
-                  >
-                    <Linkedin className="w-5 h-5 text-accent" />
-                    <span className="text-sm font-medium">LinkedIn</span>
-                  </a>
+          <Card className="shadow-medium hover:shadow-glow transition-all duration-300 overflow-hidden">
+            <CardContent className="p-8">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+                <div className="relative flex-shrink-0">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-xl" />
+                  <div className="relative overflow-hidden rounded-full w-40 h-40 border-4 border-primary/30 shadow-lg">
+                    <img 
+                      src={profilePhoto} 
+                      alt="Marcel Roig Gil" 
+                      className="w-full h-full object-cover scale-150"
+                    />
+                  </div>
+                </div>
+                <div className="flex-1 text-center md:text-left space-y-4">
+                  <div>
+                    <h3 className="text-3xl font-bold mb-2 text-foreground">Marcel Roig Gil</h3>
+                    <p className="text-base text-muted-foreground">21 años</p>
+                  </div>
+                  <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+                    <a
+                      href="https://www.instagram.com/marseelroig/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-lg hover:bg-primary/20 hover:border-primary/30 transition-all duration-300 hover:scale-105"
+                    >
+                      <Instagram className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
+                      <span className="text-sm font-medium text-foreground">Instagram</span>
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/marcel-roig-gil-490b51315"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-accent/10 to-accent/5 border border-accent/20 rounded-lg hover:bg-accent/20 hover:border-accent/30 transition-all duration-300 hover:scale-105"
+                    >
+                      <Linkedin className="w-5 h-5 text-accent group-hover:scale-110 transition-transform" />
+                      <span className="text-sm font-medium text-foreground">LinkedIn</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </CardContent>

@@ -38,7 +38,9 @@ const Achievements = () => {
                 <img
                   src={achievement.image}
                   alt={`Preview de ${achievement.name}`}
-                  className="w-full h-full object-contain object-center scale-110 transition-all duration-500 group-hover:scale-125 group-hover:rotate-2"
+                  className={`w-full h-full object-contain object-center transition-all duration-500 group-hover:scale-125 group-hover:rotate-2 ${
+                    index === 1 ? 'scale-150' : 'scale-110'
+                  }`}
                 />
               </div>
               <div className="p-6 space-y-3">
