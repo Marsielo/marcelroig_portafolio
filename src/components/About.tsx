@@ -1,5 +1,6 @@
 import { Code, Radio, Music2, Dumbbell, Instagram, Linkedin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import profilePhoto from "@/assets/profile-photo.jpg";
 
 const About = () => {
@@ -55,82 +56,87 @@ const About = () => {
               <p className="text-sm text-muted-foreground mb-8">Universidad Autónoma de Barcelona</p>
               
               <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-                {/* Informática */}
+                {/* Grado en Ingeniería Informática */}
                 <div className="space-y-6">
                   <div className="flex items-start gap-3">
                     <div className="p-3 bg-primary rounded-lg flex-shrink-0">
                       <Code className="w-6 h-6 text-primary-foreground" />
                     </div>
                     <div>
-                      <h4 className="text-lg font-semibold text-foreground">Informática</h4>
+                      <h4 className="text-lg font-semibold text-foreground">Grado en Ingeniería Informática</h4>
+                      <p className="text-sm text-muted-foreground">Mención en Tecnologías de la Información</p>
                     </div>
                   </div>
                   
-                  <div className="space-y-4">
-                    <div>
-                      <h5 className="font-semibold text-foreground mb-1">Lenguajes</h5>
-                      <p className="text-sm text-muted-foreground">Python, C++, Java, lenguajes web (HTML/JavaScript/CSS)...</p>
-                    </div>
-                    
-                    <div>
-                      <h5 className="font-semibold text-foreground mb-1">Desarrollo web full-stack</h5>
-                      <p className="text-sm text-muted-foreground">Experiencia con React, SQL, Firebase y Node.js</p>
-                    </div>
-                    
-                    <div>
-                      <h5 className="font-semibold text-foreground mb-1">Bases de datos</h5>
-                      <p className="text-sm text-muted-foreground">Diseño, implementación y gestión de bases de datos relacionales y no relacionales</p>
-                    </div>
-                    
-                    <div>
-                      <h5 className="font-semibold text-foreground mb-1">Arquitectura de sistemas</h5>
-                      <p className="text-sm text-muted-foreground">Diseño de soluciones escalables y mantenibles</p>
-                    </div>
-                    
-                    <div>
-                      <h5 className="font-semibold text-foreground mb-1">ERP & backend systems</h5>
-                      <p className="text-sm text-muted-foreground">Desarrollo de un ERP propio para FANTÉ Foods con gestión de usuarios, productos, transacciones y almacenamiento en la nube</p>
-                    </div>
-                  </div>
+                  <Accordion type="single" collapsible className="w-full">
+                    <AccordionItem value="informatica-skills" className="border-none">
+                      <AccordionTrigger className="text-sm font-medium hover:no-underline py-3 px-4 bg-primary/5 rounded-lg hover:bg-primary/10 transition-colors">
+                        Competencias y habilidades
+                      </AccordionTrigger>
+                      <AccordionContent className="pt-4 space-y-4">
+                        <div>
+                          <h5 className="font-semibold text-foreground mb-1">Lenguajes de desarrollo de software</h5>
+                          <p className="text-sm text-muted-foreground">Python, C++, Java, lenguajes web (HTML/JavaScript/CSS)...</p>
+                        </div>
+                        
+                        <div>
+                          <h5 className="font-semibold text-foreground mb-1">Arquitectura de sistemas</h5>
+                          <p className="text-sm text-muted-foreground">Diseño de soluciones escalables y mantenibles, especialidad en TI</p>
+                        </div>
+                        
+                        <div>
+                          <h5 className="font-semibold text-foreground mb-1">Bases de datos</h5>
+                          <p className="text-sm text-muted-foreground">Implementación y gestión de bases de datos relacionales y no relacionales (SQL)</p>
+                        </div>
+                        
+                        <div>
+                          <h5 className="font-semibold text-foreground mb-1">Web, redes sociales y empresa</h5>
+                          <p className="text-sm text-muted-foreground">Experiencia en la digitalización y el marketing empresarial</p>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
                 </div>
                 
-                {/* Telecomunicaciones */}
+                {/* Grado en Ingeniería de Sistemas de Telecomunicación */}
                 <div className="space-y-6">
                   <div className="flex items-start gap-3">
                     <div className="p-3 bg-accent rounded-lg flex-shrink-0">
                       <Radio className="w-6 h-6 text-accent-foreground" />
                     </div>
                     <div>
-                      <h4 className="text-lg font-semibold text-foreground">Telecomunicaciones</h4>
+                      <h4 className="text-lg font-semibold text-foreground">Grado en Ingeniería de Sistemas de Telecomunicación</h4>
                     </div>
                   </div>
                   
-                  <div className="space-y-4">
-                    <div>
-                      <h5 className="font-semibold text-foreground mb-1">Señales y sistemas</h5>
-                      <p className="text-sm text-muted-foreground">Análisis de señales en dominio temporal y frecuencial (Octave, MATLAB)</p>
-                    </div>
-                    
-                    <div>
-                      <h5 className="font-semibold text-foreground mb-1">Procesamiento de señales</h5>
-                      <p className="text-sm text-muted-foreground">Filtrado, diezmado y reconstrucción de audio en entornos experimentales</p>
-                    </div>
-                    
-                    <div>
-                      <h5 className="font-semibold text-foreground mb-1">Redes y protocolos</h5>
-                      <p className="text-sm text-muted-foreground">Arquitectura OSI, análisis de tráfico con Wireshark, configuración de redes IP e inalámbricas</p>
-                    </div>
-                    
-                    <div>
-                      <h5 className="font-semibold text-foreground mb-1">Antenas y radiación</h5>
-                      <p className="text-sm text-muted-foreground">Diseño y caracterización de antenas, análisis de patrones de radiación electromagnética</p>
-                    </div>
-                    
-                    <div>
-                      <h5 className="font-semibold text-foreground mb-1">Instrumentación RF</h5>
-                      <p className="text-sm text-muted-foreground">Mediciones con osciloscopio y generador de señales, diseño de amplificadores y circuitos RF</p>
-                    </div>
-                  </div>
+                  <Accordion type="single" collapsible className="w-full">
+                    <AccordionItem value="telecos-skills" className="border-none">
+                      <AccordionTrigger className="text-sm font-medium hover:no-underline py-3 px-4 bg-accent/5 rounded-lg hover:bg-accent/10 transition-colors">
+                        Competencias y habilidades
+                      </AccordionTrigger>
+                      <AccordionContent className="pt-4 space-y-4">
+                        <div>
+                          <h5 className="font-semibold text-foreground mb-1">Circuitos eléctricos y Computadores</h5>
+                          <p className="text-sm text-muted-foreground">Diseño de circuitos, ensamblaje, puertas lógicas y arquitectura del computador (microprocesador)</p>
+                        </div>
+                        
+                        <div>
+                          <h5 className="font-semibold text-foreground mb-1">Redes avanzadas</h5>
+                          <p className="text-sm text-muted-foreground">Protocolos TCP/IP y OSI, tráfico (Wireshark) y servicios de red (DNS, DHCP...)</p>
+                        </div>
+                        
+                        <div>
+                          <h5 className="font-semibold text-foreground mb-1">Señales y sistemas</h5>
+                          <p className="text-sm text-muted-foreground">Análisis de señales en dominio temporal y frecuencial (Octave, MATLAB)</p>
+                        </div>
+                        
+                        <div>
+                          <h5 className="font-semibold text-foreground mb-1">Ondas y radiación</h5>
+                          <p className="text-sm text-muted-foreground">Electromagnetismo, óptica, radio y antenas</p>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
                 </div>
               </div>
             </CardContent>
