@@ -1,29 +1,32 @@
+import { useLanguage } from "@/contexts/LanguageContext";
 import mensaCard from "@/assets/mensa-card.png";
 import conferencePreview from "@/assets/conference-preview.jpg";
 
-const achievements = [
-  {
-    name: "Mensa Internacional",
-    subtitle: "SOCIO MIEMBRO",
-    description: "Mensa es una asociación internacional de superdotados fundada en Inglaterra en el 1946. Para entrar debe tenerse un cociente intelectual superior a 132.",
-    url: "https://www.mensa.es/qr.php?_GaMhLe-9_thCvVO92BfB-hbwvqBQYtN5mbR3eoXb6z0vLxEsCNDxSXP7y0wqy0cFf-WVBrSmoGRbfGq80X9SXL1s_gOZNkHkCjd_qxyUZdAmkWnJ-O43qhqbUCUYengI-HA-b-AWA4tq-sbk_00ng==",
-    image: mensaCard,
-  },
-  {
-    name: "Conferencias en Universidades",
-    subtitle: "PONENTE",
-    description: "Universidades como ESADE o la UAB han contado conmigo para exponer mi conocimiento en diferentes áreas como la ciencia y tecnología, la innovación histórica y, como factor común, mis características reflexiones filosóficas y metafísicas.",
-    url: "https://www.linkedin.com/feed/update/urn:li:activity:7387424323676057600/?originTrackingId=aS4OYScx01hiHXDRk602%2Fg%3D%3D",
-    image: conferencePreview,
-  },
-];
-
 const Achievements = () => {
+  const { t } = useLanguage();
+  
+  const achievements = [
+    {
+      name: t('achievements.mensa.name'),
+      subtitle: t('achievements.mensa.subtitle'),
+      description: t('achievements.mensa.desc'),
+      url: "https://www.mensa.es/qr.php?_GaMhLe-9_thCvVO92BfB-hbwvqBQYtN5mbR3eoXb6z0vLxEsCNDxSXP7y0wqy0cFf-WVBrSmoGRbfGq80X9SXL1s_gOZNkHkCjd_qxyUZdAmkWnJ-O43qhqbUCUYengI-HA-b-AWA4tq-sbk_00ng==",
+      image: mensaCard,
+    },
+    {
+      name: t('achievements.conferences.name'),
+      subtitle: t('achievements.conferences.subtitle'),
+      description: t('achievements.conferences.desc'),
+      url: "https://www.linkedin.com/feed/update/urn:li:activity:7387424323676057600/?originTrackingId=aS4OYScx01hiHXDRk602%2Fg%3D%3D",
+      image: conferencePreview,
+    },
+  ];
+
   return (
     <section id="achievements" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-foreground">
-          Otros logros
+          {t('achievements.title')}
         </h2>
         <div className="w-20 h-1 bg-gradient-accent mx-auto mb-12 rounded-full" />
 
@@ -40,8 +43,8 @@ const Achievements = () => {
                 <img
                   src={achievement.image}
                   alt={`Preview de ${achievement.name}`}
-                  className={`w-full h-full object-contain object-center transition-all duration-500 group-hover:scale-125 group-hover:rotate-2 ${
-                    index === 1 ? 'scale-150' : 'scale-110'
+                  className={`w-full h-full object-contain object-center transition-all duration-500 group-hover:rotate-2 ${
+                    index === 1 ? 'scale-150 group-hover:scale-[1.75]' : 'scale-110 group-hover:scale-125'
                   }`}
                 />
               </div>

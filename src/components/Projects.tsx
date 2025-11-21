@@ -1,34 +1,37 @@
+import { useLanguage } from "@/contexts/LanguageContext";
 import enerseaLogo from "@/assets/enersea-logo.png";
 import blackboxLogo from "@/assets/blackbox-logo.png";
 import parkourLogo from "@/assets/parkour-logo.png";
 
-const projects = [
-  {
-    name: "EnerSea Foods",
-    description: "Empresa de alimentación saludable dedicada a ofrecer productos nutritivos y sostenibles. Especializada en alimentos marinos y opciones saludables para un estilo de vida equilibrado.",
-    url: "https://enerseafoods.com/",
-    image: enerseaLogo,
-  },
-  {
-    name: "Black Box Informática",
-    description: "Negocio de desarrollo web especializado en crear soluciones digitales para pequeñas y grandes empresas. Desde sitios web corporativos hasta aplicaciones web complejas y sistemas personalizados.",
-    url: "https://blackboxinformatica.es/",
-    image: blackboxLogo,
-  },
-  {
-    name: "Asociación Juvenil Parkour Palau",
-    description: "Asociación sin ánimo de lucro dedicada a promover la filosofía saludable del arte del movimiento en jóvenes. Fomentando valores de superación, disciplina y trabajo en equipo a través del parkour.",
-    url: "https://www.instagram.com/parkourpalau/",
-    image: parkourLogo,
-  },
-];
-
 const Projects = () => {
+  const { t } = useLanguage();
+  
+  const projects = [
+    {
+      name: t('projects.enersea.name'),
+      description: t('projects.enersea.desc'),
+      url: "https://enerseafoods.com/",
+      image: enerseaLogo,
+    },
+    {
+      name: t('projects.blackbox.name'),
+      description: t('projects.blackbox.desc'),
+      url: "https://blackboxinformatica.es/",
+      image: blackboxLogo,
+    },
+    {
+      name: t('projects.parkour.name'),
+      description: t('projects.parkour.desc'),
+      url: "https://www.instagram.com/parkourpalau/",
+      image: parkourLogo,
+    },
+  ];
+
   return (
     <section id="projects" className="py-20 bg-muted/30">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-foreground">
-          Proyectos y Empresas
+          {t('projects.title')}
         </h2>
         <div className="w-20 h-1 bg-gradient-accent mx-auto mb-12 rounded-full" />
 
@@ -55,7 +58,7 @@ const Projects = () => {
               <div className="p-6 space-y-3">
                 <div>
                   <h3 className="text-2xl font-semibold text-foreground">{project.name}</h3>
-                  <p className="text-xs font-semibold text-primary tracking-wider mt-1">FUNDADOR</p>
+                  <p className="text-xs font-semibold text-primary tracking-wider mt-1">{t('projects.founder')}</p>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
                   {project.description}
