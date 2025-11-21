@@ -46,14 +46,17 @@ const Projects = () => {
                   <img
                     src={project.image}
                     alt={`Logo de ${project.name}`}
-                    className={`w-full h-full object-contain transition-all duration-700 group-hover:rotate-[360deg] group-hover:scale-110 ${
+                    className={`w-full h-full object-contain transition-all duration-700 group-hover:rotate-[360deg] ${
                       index === 1 || index === 2 ? 'scale-150' : ''
                     }`}
                   />
                 </div>
               </div>
               <div className="p-6 space-y-3">
-                <h3 className="text-2xl font-semibold text-foreground">{project.name}</h3>
+                <div>
+                  <h3 className="text-2xl font-semibold text-foreground">{project.name}</h3>
+                  <p className="text-xs font-semibold text-primary tracking-wider mt-1">FUNDADOR</p>
+                </div>
                 <p className="text-muted-foreground leading-relaxed">
                   {project.description}
                 </p>

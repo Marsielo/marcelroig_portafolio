@@ -8,7 +8,7 @@ const About = () => {
     <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-foreground">
-          Sobre Mí
+          Sobre mí
         </h2>
         <div className="w-20 h-1 bg-gradient-accent mx-auto mb-12 rounded-full" />
 
@@ -166,10 +166,10 @@ const About = () => {
                   href="https://www.youtube.com/@seasky13"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 px-4 py-2.5 bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105"
+                  className="inline-flex items-center gap-3 px-4 py-2.5 bg-muted/50 hover:bg-muted border border-border rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105"
                 >
-                  <Youtube className="w-5 h-5" />
-                  <span>Canal de YouTube: SeaSky</span>
+                  <Youtube className="w-5 h-5 text-red-600" />
+                  <span className="text-foreground">Canal de YouTube: SeaSky</span>
                 </a>
               </div>
             </CardContent>
