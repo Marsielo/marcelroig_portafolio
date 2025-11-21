@@ -1,9 +1,22 @@
 import { ArrowDown } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
+  const { t } = useLanguage();
+  
   const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
   };
 
   return (
@@ -22,27 +35,24 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-1000">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-primary-foreground">
-            Marcel Roig Gil
+            {t('hero.title')}
           </h1>
           <p className="text-xl md:text-2xl mb-4 text-primary-foreground/90 max-w-3xl mx-auto">
-            Estudiante de Ingeniería Informática y Sistemas de Telecomunicación
-          </p>
-          <p className="text-lg md:text-xl mb-8 text-primary-foreground/80 max-w-2xl mx-auto">
-            Erudito • Visionario • Artista
+            {t('hero.subtitle')}
           </p>
           
-          <div className="flex gap-4 justify-center flex-wrap">
+          <div className="flex gap-4 justify-center flex-wrap mt-8">
             <button
               onClick={() => scrollToSection("about")}
               className="px-8 py-3 bg-accent text-accent-foreground rounded-lg font-semibold hover:shadow-glow transition-all duration-300 hover:scale-105"
             >
-              Sobre mí
+              {t('hero.cta.about')}
             </button>
             <button
               onClick={() => scrollToSection("contact")}
               className="px-8 py-3 bg-card/20 backdrop-blur-sm text-primary-foreground border-2 border-primary-foreground/30 rounded-lg font-semibold hover:bg-card/30 transition-all duration-300"
             >
-              Contacto
+              {t('hero.cta.contact')}
             </button>
           </div>
 

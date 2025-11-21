@@ -1,14 +1,17 @@
-import { Laptop, Signal, Music2, Dumbbell, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Laptop, Signal, Music2, Dumbbell, Instagram, Linkedin, Youtube, Download } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { useLanguage } from "@/contexts/LanguageContext";
 import profilePhoto from "@/assets/profile-photo.jpg";
 
 const About = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-foreground">
-          Sobre mí
+          {t('about.title')}
         </h2>
         <div className="w-20 h-1 bg-gradient-accent mx-auto mb-12 rounded-full" />
 
@@ -22,15 +25,15 @@ const About = () => {
                   <div className="relative overflow-hidden rounded-full w-40 h-40 border-4 border-primary/30 shadow-lg">
                     <img 
                       src={profilePhoto} 
-                      alt="Marcel Roig Gil" 
+                      alt={t('about.name')}
                       className="w-full h-full object-cover scale-150"
                     />
                   </div>
                 </div>
                 <div className="flex-1 text-center md:text-left space-y-4">
                   <div>
-                    <h3 className="text-3xl font-bold mb-2 text-foreground">Marcel Roig Gil</h3>
-                    <p className="text-base text-muted-foreground">21 años</p>
+                    <h3 className="text-3xl font-bold mb-2 text-foreground">{t('about.name')}</h3>
+                    <p className="text-base text-muted-foreground">{t('about.age')}</p>
                   </div>
                   <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                     <a
@@ -51,6 +54,14 @@ const About = () => {
                       <Linkedin className="w-5 h-5 text-accent group-hover:scale-110 transition-transform" />
                       <span className="text-sm font-medium text-foreground">LinkedIn</span>
                     </a>
+                    <a
+                      href="/CV_MarcelRoig.pdf"
+                      download="CV_MarcelRoig.pdf"
+                      className="group flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-secondary/10 to-secondary/5 border border-secondary/20 rounded-lg hover:bg-secondary/20 hover:border-secondary/30 transition-all duration-300 hover:scale-105"
+                    >
+                      <Download className="w-5 h-5 text-secondary group-hover:scale-110 transition-transform" />
+                      <span className="text-sm font-medium text-foreground">{t('about.download.cv')}</span>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -60,8 +71,8 @@ const About = () => {
           {/* Academic Formation Card */}
           <Card className="shadow-medium hover:shadow-glow transition-all duration-300">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-semibold mb-2 text-foreground">Formación Académica</h3>
-              <p className="text-sm text-muted-foreground mb-8">Universidad Autónoma de Barcelona</p>
+              <h3 className="text-2xl font-semibold mb-2 text-foreground">{t('about.formation.title')}</h3>
+              <p className="text-sm text-muted-foreground mb-8">{t('about.formation.university')}</p>
               
               <div className="grid md:grid-cols-2 gap-8 md:gap-12">
                 {/* Grado en Ingeniería Informática */}
@@ -71,35 +82,35 @@ const About = () => {
                       <Laptop className="w-6 h-6 text-primary-foreground" />
                     </div>
                     <div>
-                      <h4 className="text-lg font-semibold text-foreground">Grado en Ingeniería Informática</h4>
-                      <p className="text-sm text-muted-foreground">Mención en Tecnologías de la Información</p>
+                      <h4 className="text-lg font-semibold text-foreground">{t('about.formation.cs')}</h4>
+                      <p className="text-sm text-muted-foreground">{t('about.formation.cs.subtitle')}</p>
                     </div>
                   </div>
                   
                   <Accordion type="single" collapsible className="w-full">
                     <AccordionItem value="informatica-skills" className="border-none">
                       <AccordionTrigger className="text-sm font-medium hover:no-underline py-3 px-4 bg-muted rounded-lg hover:bg-muted/80 transition-colors">
-                        Competencias y habilidades
+                        {t('about.formation.skills')}
                       </AccordionTrigger>
                       <AccordionContent className="pt-4 space-y-4">
                         <div>
-                          <h5 className="font-semibold text-foreground mb-1">Lenguajes de desarrollo de software</h5>
-                          <p className="text-sm text-muted-foreground">Python, C++, Java, lenguajes web (HTML/JavaScript/CSS)...</p>
+                          <h5 className="font-semibold text-foreground mb-1">{t('about.formation.cs.skill1.title')}</h5>
+                          <p className="text-sm text-muted-foreground">{t('about.formation.cs.skill1.desc')}</p>
                         </div>
                         
                         <div>
-                          <h5 className="font-semibold text-foreground mb-1">Arquitectura de sistemas</h5>
-                          <p className="text-sm text-muted-foreground">Diseño de soluciones escalables y mantenibles, especialidad en TI</p>
+                          <h5 className="font-semibold text-foreground mb-1">{t('about.formation.cs.skill2.title')}</h5>
+                          <p className="text-sm text-muted-foreground">{t('about.formation.cs.skill2.desc')}</p>
                         </div>
                         
                         <div>
-                          <h5 className="font-semibold text-foreground mb-1">Bases de datos</h5>
-                          <p className="text-sm text-muted-foreground">Implementación y gestión de bases de datos relacionales y no relacionales (SQL)</p>
+                          <h5 className="font-semibold text-foreground mb-1">{t('about.formation.cs.skill3.title')}</h5>
+                          <p className="text-sm text-muted-foreground">{t('about.formation.cs.skill3.desc')}</p>
                         </div>
                         
                         <div>
-                          <h5 className="font-semibold text-foreground mb-1">Web, redes sociales y empresa</h5>
-                          <p className="text-sm text-muted-foreground">Experiencia en la digitalización y el marketing empresarial</p>
+                          <h5 className="font-semibold text-foreground mb-1">{t('about.formation.cs.skill4.title')}</h5>
+                          <p className="text-sm text-muted-foreground">{t('about.formation.cs.skill4.desc')}</p>
                         </div>
                       </AccordionContent>
                     </AccordionItem>
@@ -113,34 +124,34 @@ const About = () => {
                       <Signal className="w-6 h-6 text-accent-foreground" />
                     </div>
                     <div>
-                      <h4 className="text-lg font-semibold text-foreground">Grado en Ingeniería de Sistemas de Telecomunicación</h4>
+                      <h4 className="text-lg font-semibold text-foreground">{t('about.formation.telecom')}</h4>
                     </div>
                   </div>
                   
                   <Accordion type="single" collapsible className="w-full">
                     <AccordionItem value="telecos-skills" className="border-none">
                       <AccordionTrigger className="text-sm font-medium hover:no-underline py-3 px-4 bg-muted rounded-lg hover:bg-muted/80 transition-colors">
-                        Competencias y habilidades
+                        {t('about.formation.skills')}
                       </AccordionTrigger>
                       <AccordionContent className="pt-4 space-y-4">
                         <div>
-                          <h5 className="font-semibold text-foreground mb-1">Circuitos eléctricos y Computadores</h5>
-                          <p className="text-sm text-muted-foreground">Diseño de circuitos, ensamblaje, puertas lógicas y arquitectura del computador (microprocesador)</p>
+                          <h5 className="font-semibold text-foreground mb-1">{t('about.formation.telecom.skill1.title')}</h5>
+                          <p className="text-sm text-muted-foreground">{t('about.formation.telecom.skill1.desc')}</p>
                         </div>
                         
                         <div>
-                          <h5 className="font-semibold text-foreground mb-1">Redes avanzadas</h5>
-                          <p className="text-sm text-muted-foreground">Protocolos TCP/IP y OSI, tráfico (Wireshark) y servicios de red (DNS, DHCP...)</p>
+                          <h5 className="font-semibold text-foreground mb-1">{t('about.formation.telecom.skill2.title')}</h5>
+                          <p className="text-sm text-muted-foreground">{t('about.formation.telecom.skill2.desc')}</p>
                         </div>
                         
                         <div>
-                          <h5 className="font-semibold text-foreground mb-1">Señales y sistemas</h5>
-                          <p className="text-sm text-muted-foreground">Análisis de señales en dominio temporal y frecuencial (Octave, MATLAB)</p>
+                          <h5 className="font-semibold text-foreground mb-1">{t('about.formation.telecom.skill3.title')}</h5>
+                          <p className="text-sm text-muted-foreground">{t('about.formation.telecom.skill3.desc')}</p>
                         </div>
                         
                         <div>
-                          <h5 className="font-semibold text-foreground mb-1">Ondas y radiación</h5>
-                          <p className="text-sm text-muted-foreground">Electromagnetismo, óptica, radio y antenas</p>
+                          <h5 className="font-semibold text-foreground mb-1">{t('about.formation.telecom.skill4.title')}</h5>
+                          <p className="text-sm text-muted-foreground">{t('about.formation.telecom.skill4.desc')}</p>
                         </div>
                       </AccordionContent>
                     </AccordionItem>
@@ -157,10 +168,9 @@ const About = () => {
                 <Music2 className="w-6 h-6 text-accent" />
               </div>
               <div className="flex-1">
-                <h3 className="text-xl font-semibold mb-2 text-foreground">Música</h3>
+                <h3 className="text-xl font-semibold mb-2 text-foreground">{t('about.music.title')}</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Pianista y vocalista desde pequeño, la música es mi mundo de belleza ordenada. 
-                  Amante de todo tipo de estilos y compositor de mis propias obras.
+                  {t('about.music.desc')}
                 </p>
                 <a
                   href="https://www.youtube.com/@seasky13"
@@ -169,7 +179,7 @@ const About = () => {
                   className="inline-flex items-center gap-3 px-4 py-2.5 bg-muted/50 hover:bg-muted border border-border rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105"
                 >
                   <Youtube className="w-5 h-5 text-red-600" />
-                  <span className="text-foreground">Canal de YouTube: SeaSky</span>
+                  <span className="text-foreground">{t('about.music.youtube')}</span>
                 </a>
               </div>
             </CardContent>
@@ -182,24 +192,21 @@ const About = () => {
                 <Dumbbell className="w-6 h-6 text-secondary-foreground" />
               </div>
               <div className="flex-1">
-                <h3 className="text-xl font-semibold mb-2 text-foreground">Deporte</h3>
+                <h3 className="text-xl font-semibold mb-2 text-foreground">{t('about.sports.title')}</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Practicante de múltiples deportes y disciplinas, tratando de mantener una salud 
-                  física y mental con esfuerzo y rigor. De entre mis actividades más comunes están: 
-                  gimnasio y calistenia, boxeo y artes marciales, tenis, parkour y acrobacias, 
-                  resistencia (running, natación y ciclismo)...
+                  {t('about.sports.desc1')}
                 </p>
                 <p className="text-muted-foreground leading-relaxed mt-3">
-                  Fundador de la Asociación sin ánimo de lucro{" "}
+                  {t('about.sports.desc2')}{" "}
                   <a
                     href="https://www.instagram.com/parkourpalau/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-semibold text-foreground hover:text-accent transition-colors"
                   >
-                    "PARKOUR PALAU"
+                    {t('about.sports.parkour')}
                   </a>
-                  , dedicada a promover la filosofía saludable del arte del movimiento en jóvenes.
+                  {t('about.sports.desc3')}
                 </p>
               </div>
             </CardContent>

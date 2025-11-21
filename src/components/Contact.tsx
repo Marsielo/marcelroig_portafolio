@@ -1,41 +1,40 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-
-const contactInfo = [
-  {
-    icon: Mail,
-    label: "Email",
-    value: "marcelroiggil@gmail.com",
-    href: "mailto:marcelroiggil@gmail.com",
-  },
-  {
-    icon: Phone,
-    label: "Teléfono",
-    value: "+34 608 16 13 20",
-    href: "tel:+34608161320",
-  },
-  {
-    icon: MapPin,
-    label: "Ubicación",
-    value: "08184 Palau-solità i Plegamans, Barcelona",
-    href: null,
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
+  const { t } = useLanguage();
+  
+  const contactInfo = [
+    {
+      icon: Mail,
+      label: t('contact.email'),
+      value: "marcelroiggil@gmail.com",
+      href: "mailto:marcelroiggil@gmail.com",
+    },
+    {
+      icon: Phone,
+      label: t('contact.phone'),
+      value: "+34 608 16 13 20",
+      href: "tel:+34608161320",
+    },
+    {
+      icon: MapPin,
+      label: t('contact.address'),
+      value: "08184 Palau-solità i Plegamans, Barcelona",
+      href: null,
+    },
+  ];
+
   return (
     <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-foreground">
-          Contacto
+          {t('contact.title')}
         </h2>
         <div className="w-20 h-1 bg-gradient-accent mx-auto mb-12 rounded-full" />
 
         <div className="max-w-3xl mx-auto">
-          <p className="text-center text-lg text-muted-foreground mb-12">
-            ¿Tienes algún proyecto en mente o quieres colaborar? No dudes en ponerte en contacto.
-          </p>
-
           <div className="grid md:grid-cols-3 gap-6">
             {contactInfo.map((item, index) => (
               <Card key={index} className="shadow-medium hover:shadow-glow transition-all duration-300">
