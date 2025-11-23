@@ -34,11 +34,14 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-1000">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-primary-foreground">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white dark:text-white">
             {t('hero.title')}
           </h1>
-          <p className="text-xl md:text-2xl mb-4 text-primary-foreground/90 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl mb-4 text-white/90 dark:text-white/90 max-w-3xl mx-auto">
             {t('hero.subtitle')}
+          </p>
+          <p className="text-lg md:text-xl mb-2 text-white/80 dark:text-white/80 max-w-3xl mx-auto">
+            {t('hero.tagline')}
           </p>
           
           <div className="flex gap-4 justify-center flex-wrap mt-8">
@@ -50,7 +53,7 @@ const Hero = () => {
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="px-8 py-3 bg-card/20 backdrop-blur-sm text-primary-foreground border-2 border-primary-foreground/30 rounded-lg font-semibold hover:bg-card/30 transition-all duration-300"
+              className="px-8 py-3 bg-card/20 backdrop-blur-sm text-white dark:text-white border-2 border-white/30 dark:border-white/30 rounded-lg font-semibold hover:bg-card/30 transition-all duration-300"
             >
               {t('hero.cta.contact')}
             </button>
@@ -62,7 +65,7 @@ const Hero = () => {
             className="mt-12 animate-bounce"
             aria-label="Scroll to content"
           >
-            <ArrowDown className="w-8 h-8 text-primary-foreground/70" />
+            <ArrowDown className="w-8 h-8 text-white/70 dark:text-white/70" />
           </button>
         </div>
       </div>

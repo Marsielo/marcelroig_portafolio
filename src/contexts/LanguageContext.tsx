@@ -22,6 +22,7 @@ const translations = {
     // Hero
     'hero.title': 'Marcel Roig Gil',
     'hero.subtitle': 'Ingeniero Informático y de Telecomunicaciones',
+    'hero.tagline': 'Erudito · Visionario · Artista',
     'hero.cta.about': 'Sobre mí',
     'hero.cta.contact': 'Contacto',
     
@@ -100,6 +101,7 @@ const translations = {
     // Hero
     'hero.title': 'Marcel Roig Gil',
     'hero.subtitle': 'Computer and Telecommunications Engineer',
+    'hero.tagline': 'Scholar · Visionary · Artist',
     'hero.cta.about': 'About Me',
     'hero.cta.contact': 'Contact',
     
