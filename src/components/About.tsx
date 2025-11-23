@@ -57,9 +57,9 @@ const About = () => {
                     <a
                       href="/CV_MarcelRoig.pdf"
                       download="CV_MarcelRoig.pdf"
-                      className="group flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-secondary/10 to-secondary/5 border border-secondary/20 rounded-lg hover:bg-secondary/20 hover:border-secondary/30 transition-all duration-300 hover:scale-105"
+                      className="group flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-primary/10 to-primary/5 border-2 border-primary/60 dark:border-primary rounded-lg hover:bg-primary/20 hover:border-primary/80 dark:hover:border-primary/80 transition-all duration-300 hover:scale-105"
                     >
-                      <Download className="w-5 h-5 text-secondary group-hover:scale-110 transition-transform" />
+                      <Download className="w-5 h-5 text-primary dark:text-primary group-hover:scale-110 transition-transform" />
                       <span className="text-sm font-medium text-foreground">{t('about.download.cv')}</span>
                     </a>
                   </div>
