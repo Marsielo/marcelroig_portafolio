@@ -42,7 +42,13 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon" className="rounded-full">
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className={`rounded-full transition-colors duration-300 ${
+                  !isScrolled ? 'text-white hover:text-white/80' : ''
+                }`}
+              >
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
@@ -101,31 +107,41 @@ const Header = () => {
           <nav className="hidden md:flex items-center gap-8 flex-1 justify-center">
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="text-muted-foreground hover:text-foreground transition-colors font-medium"
+              className={`transition-colors font-medium ${
+                !isScrolled ? 'text-white hover:text-white/80' : 'text-muted-foreground hover:text-foreground'
+              }`}
             >
               {t('nav.inicio')}
             </button>
             <button
               onClick={() => scrollToSection('about')}
-              className="text-muted-foreground hover:text-foreground transition-colors font-medium"
+              className={`transition-colors font-medium ${
+                !isScrolled ? 'text-white hover:text-white/80' : 'text-muted-foreground hover:text-foreground'
+              }`}
             >
               {t('nav.about')}
             </button>
             <button
               onClick={() => scrollToSection('projects')}
-              className="text-muted-foreground hover:text-foreground transition-colors font-medium"
+              className={`transition-colors font-medium ${
+                !isScrolled ? 'text-white hover:text-white/80' : 'text-muted-foreground hover:text-foreground'
+              }`}
             >
               {t('nav.projects')}
             </button>
             <button
               onClick={() => scrollToSection('achievements')}
-              className="text-muted-foreground hover:text-foreground transition-colors font-medium"
+              className={`transition-colors font-medium ${
+                !isScrolled ? 'text-white hover:text-white/80' : 'text-muted-foreground hover:text-foreground'
+              }`}
             >
               {t('nav.achievements')}
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-muted-foreground hover:text-foreground transition-colors font-medium"
+              className={`transition-colors font-medium ${
+                !isScrolled ? 'text-white hover:text-white/80' : 'text-muted-foreground hover:text-foreground'
+              }`}
             >
               {t('nav.contact')}
             </button>
@@ -138,10 +154,12 @@ const Header = () => {
               variant="ghost"
               size="icon"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="rounded-full"
+              className={`rounded-full transition-colors duration-300 ${
+                !isScrolled ? 'text-white hover:text-white/80 hover:bg-white/10' : 'hover:bg-accent'
+              }`}
             >
-              <Moon className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Sun className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+              <Moon className="h-5 w-5 rotate-0 scale-100 transition-transform dark:-rotate-90 dark:scale-0" />
+              <Sun className="absolute h-5 w-5 rotate-90 scale-0 transition-transform dark:rotate-0 dark:scale-100" />
               <span className="sr-only">Toggle theme</span>
             </Button>
 
