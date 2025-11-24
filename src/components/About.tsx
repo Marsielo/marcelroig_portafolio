@@ -65,6 +65,11 @@ const About = () => {
                   </div>
                 </div>
               </div>
+              <div className="mt-6 pt-6 border-t border-border">
+                <p className="text-muted-foreground leading-relaxed text-center md:text-left">
+                  {t('about.intro')}
+                </p>
+              </div>
             </CardContent>
           </Card>
 
@@ -196,8 +201,20 @@ const About = () => {
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-semibold mb-2 text-foreground">{t('about.music.title')}</h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">
+                <p className="text-muted-foreground leading-relaxed mb-3">
                   {t('about.music.desc')}
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Mis canciones publicadas en las redes bajo el apodo{" "}
+                  <a
+                    href="https://www.youtube.com/@seasky13"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-foreground hover:text-accent transition-colors"
+                  >
+                    "SeaSky"
+                  </a>
+                  {" "}muestran mis gustos variados y el recorrido de mis habilidades musicales.
                 </p>
                 <a
                   href="https://www.youtube.com/@seasky13"
@@ -223,7 +240,7 @@ const About = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   {t('about.sports.desc1')}
                 </p>
-                <p className="text-muted-foreground leading-relaxed mt-3">
+                <p className="text-muted-foreground leading-relaxed mt-3 mb-4">
                   {t('about.sports.desc2')}{" "}
                   <a
                     href="https://www.instagram.com/parkourpalau/"
@@ -235,6 +252,15 @@ const About = () => {
                   </a>
                   {t('about.sports.desc3')}
                 </p>
+                <a
+                  href="https://www.instagram.com/parkourpalau/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 px-4 py-2.5 bg-muted/50 hover:bg-muted border border-border rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105"
+                >
+                  <Instagram className="w-5 h-5 text-pink-600" />
+                  <span className="text-foreground">{t('about.sports.instagram')}</span>
+                </a>
               </div>
             </CardContent>
           </Card>
