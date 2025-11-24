@@ -1,4 +1,4 @@
-import { Laptop, Signal, Music2, Dumbbell, Instagram, Linkedin, Youtube, Download } from "lucide-react";
+import { Laptop, Signal, Music2, Dumbbell, Instagram, Linkedin, Youtube, Download, Languages } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -156,6 +156,33 @@ const About = () => {
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Languages Card */}
+          <Card className="shadow-medium hover:shadow-glow transition-all duration-300">
+            <CardContent className="p-8">
+              <div className="flex items-start gap-3 mb-6">
+                <div className="p-3 bg-primary/10 rounded-lg flex-shrink-0">
+                  <Languages className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-2xl font-semibold text-foreground mt-2">{t('about.languages.title')}</h3>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-center justify-between py-3 px-4 bg-muted/30 rounded-lg">
+                  <span className="font-medium text-foreground">{t('about.languages.spanish')}</span>
+                  <span className="text-sm text-muted-foreground font-medium">{t('about.languages.native')}</span>
+                </div>
+                <div className="flex items-center justify-between py-3 px-4 bg-muted/30 rounded-lg">
+                  <span className="font-medium text-foreground">{t('about.languages.catalan')}</span>
+                  <span className="text-sm text-muted-foreground font-medium">{t('about.languages.native')}</span>
+                </div>
+                <div className="flex items-center justify-between py-3 px-4 bg-muted/30 rounded-lg">
+                  <span className="font-medium text-foreground">{t('about.languages.english')}</span>
+                  <span className="text-sm text-muted-foreground font-medium">{t('about.languages.intermediate')}</span>
                 </div>
               </div>
             </CardContent>
