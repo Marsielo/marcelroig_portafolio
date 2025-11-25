@@ -65,9 +65,12 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              <div className="mt-6 pt-6 border-t border-border">
+              <div className="mt-6 pt-6 border-t border-border space-y-3">
                 <p className="text-muted-foreground leading-relaxed text-center md:text-left">
                   {t('about.intro')}
+                </p>
+                <p className="text-muted-foreground leading-relaxed text-center md:text-left italic">
+                  {t('about.quote')}
                 </p>
               </div>
             </CardContent>
@@ -166,33 +169,6 @@ const About = () => {
             </CardContent>
           </Card>
 
-          {/* Languages Card */}
-          <Card className="shadow-medium hover:shadow-glow transition-all duration-300">
-            <CardContent className="p-8">
-              <div className="flex items-start gap-3 mb-6">
-                <div className="p-3 bg-primary/10 rounded-lg flex-shrink-0">
-                  <Languages className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="text-2xl font-semibold text-foreground mt-2">{t('about.languages.title')}</h3>
-              </div>
-              
-              <div className="space-y-4">
-                <div className="flex items-center justify-between py-3 px-4 bg-muted/30 rounded-lg">
-                  <span className="font-medium text-foreground">{t('about.languages.spanish')}</span>
-                  <span className="text-sm text-muted-foreground font-medium">{t('about.languages.native')}</span>
-                </div>
-                <div className="flex items-center justify-between py-3 px-4 bg-muted/30 rounded-lg">
-                  <span className="font-medium text-foreground">{t('about.languages.catalan')}</span>
-                  <span className="text-sm text-muted-foreground font-medium">{t('about.languages.native')}</span>
-                </div>
-                <div className="flex items-center justify-between py-3 px-4 bg-muted/30 rounded-lg">
-                  <span className="font-medium text-foreground">{t('about.languages.english')}</span>
-                  <span className="text-sm text-muted-foreground font-medium">{t('about.languages.intermediate')}</span>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
           {/* Music Card */}
           <Card className="shadow-medium hover:shadow-glow transition-all duration-300">
             <CardContent className="p-6 flex items-start gap-4">
@@ -201,20 +177,20 @@ const About = () => {
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-semibold mb-2 text-foreground">{t('about.music.title')}</h3>
-                <p className="text-muted-foreground leading-relaxed mb-3">
+                <p className="text-muted-foreground leading-relaxed mb-4">
                   {t('about.music.desc')}
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Mis canciones publicadas en las redes bajo el apodo{" "}
+                  {t('about.music.desc2.before')}
                   <a
                     href="https://www.youtube.com/@seasky13"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-semibold text-foreground hover:text-accent transition-colors"
                   >
-                    "SeaSky"
+                    SeaSky
                   </a>
-                  {" "}muestran mis gustos variados y el recorrido de mis habilidades musicales.
+                  {t('about.music.desc2.after')}
                 </p>
                 <a
                   href="https://www.youtube.com/@seasky13"
@@ -237,10 +213,10 @@ const About = () => {
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-semibold mb-2 text-foreground">{t('about.sports.title')}</h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed mb-4">
                   {t('about.sports.desc1')}
                 </p>
-                <p className="text-muted-foreground leading-relaxed mt-3 mb-4">
+                <p className="text-muted-foreground leading-relaxed mb-4">
                   {t('about.sports.desc2')}{" "}
                   <a
                     href="https://www.instagram.com/parkourpalau/"
@@ -261,6 +237,54 @@ const About = () => {
                   <Instagram className="w-5 h-5 text-pink-600" />
                   <span className="text-foreground">{t('about.sports.instagram')}</span>
                 </a>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Others Card */}
+          <Card className="shadow-medium hover:shadow-glow transition-all duration-300">
+            <CardContent className="p-8">
+              <div className="flex items-start gap-3 mb-6">
+                <div className="p-3 bg-primary/10 rounded-lg flex-shrink-0">
+                  <Languages className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-2xl font-semibold text-foreground mt-2">{t('about.others.title')}</h3>
+              </div>
+              
+              <div className="space-y-8">
+                {/* Languages Subsection */}
+                <div>
+                  <h4 className="text-lg font-semibold text-foreground mb-4">{t('about.others.languages.title')}</h4>
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between py-3 px-4 bg-muted/30 rounded-lg">
+                      <span className="font-medium text-foreground">{t('about.others.languages.spanish')}</span>
+                      <span className="text-sm text-muted-foreground font-medium">{t('about.others.languages.native')}</span>
+                    </div>
+                    <div className="flex items-center justify-between py-3 px-4 bg-muted/30 rounded-lg">
+                      <span className="font-medium text-foreground">{t('about.others.languages.catalan')}</span>
+                      <span className="text-sm text-muted-foreground font-medium">{t('about.others.languages.native')}</span>
+                    </div>
+                    <div className="flex items-center justify-between py-3 px-4 bg-muted/30 rounded-lg">
+                      <span className="font-medium text-foreground">{t('about.others.languages.english')}</span>
+                      <span className="text-sm text-muted-foreground font-medium">{t('about.others.languages.intermediate')}</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Driver's Licenses Subsection */}
+                <div>
+                  <h4 className="text-lg font-semibold text-foreground mb-4">{t('about.others.licenses.title')}</h4>
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between py-3 px-4 bg-muted/30 rounded-lg">
+                      <span className="font-medium text-foreground">{t('about.others.licenses.car')}</span>
+                      <span className="text-sm text-muted-foreground font-medium">{t('about.others.licenses.carLevel')}</span>
+                    </div>
+                    <div className="flex items-center justify-between py-3 px-4 bg-muted/30 rounded-lg">
+                      <span className="font-medium text-foreground">{t('about.others.licenses.motorcycle')}</span>
+                      <span className="text-sm text-muted-foreground font-medium">{t('about.others.licenses.motorcycleLevel')}</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </CardContent>
           </Card>
