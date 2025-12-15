@@ -1,4 +1,4 @@
-import { Laptop, Signal, Music2, Dumbbell, Instagram, Linkedin, Youtube, Download, Languages } from "lucide-react";
+import { Laptop, Signal, Music2, Dumbbell, Instagram, Linkedin, Youtube, Download, Languages, Globe } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -219,7 +219,7 @@ const About = () => {
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   {t('about.sports.desc2')}{" "}
                   <a
-                    href="https://www.instagram.com/parkourpalau/"
+                    href="https://www.parkourpalau.es/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-semibold text-foreground hover:text-accent transition-colors"
@@ -228,15 +228,26 @@ const About = () => {
                   </a>
                   {t('about.sports.desc3')}
                 </p>
-                <a
-                  href="https://www.instagram.com/parkourpalau/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 px-4 py-2.5 bg-muted/50 hover:bg-muted border border-border rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105"
-                >
-                  <Instagram className="w-5 h-5 text-pink-600" />
-                  <span className="text-foreground">{t('about.sports.instagram')}</span>
-                </a>
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href="https://www.instagram.com/parkourpalau/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 px-4 py-2.5 bg-muted/50 hover:bg-muted border border-border rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105"
+                  >
+                    <Instagram className="w-5 h-5 text-pink-600" />
+                    <span className="text-foreground">{t('about.sports.instagram')}</span>
+                  </a>
+                  <a
+                    href="https://www.parkourpalau.es/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 px-4 py-2.5 bg-muted/50 hover:bg-muted border border-border rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105"
+                  >
+                    <Globe className="w-5 h-5 text-primary" />
+                    <span className="text-foreground">{t('about.sports.website')}</span>
+                  </a>
+                </div>
               </div>
             </CardContent>
           </Card>

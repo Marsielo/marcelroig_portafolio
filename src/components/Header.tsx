@@ -104,7 +104,7 @@ const Header = () => {
           </Sheet>
 
           {/* Desktop Navigation Links - Centered */}
-          <nav className="hidden md:flex items-center gap-8 flex-1 justify-center">
+          <nav className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className={`transition-colors font-medium ${
