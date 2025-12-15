@@ -1,7 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import enerseaLogo from "@/assets/enersea-logo.png";
 import blackboxLogo from "@/assets/blackbox-logo.png";
-import parkourLogo from "@/assets/parkour-logo.png";
+import parkourLogo from "@/assets/parkour-palau-logo.png";
 
 const Projects = () => {
   const { t } = useLanguage();
@@ -22,7 +22,7 @@ const Projects = () => {
     {
       name: t('projects.parkour.name'),
       description: t('projects.parkour.desc'),
-      url: "https://www.instagram.com/parkourpalau/",
+      url: "https://www.parkourpalau.es/",
       image: parkourLogo,
     },
   ];
