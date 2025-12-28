@@ -82,10 +82,10 @@ const About = () => {
               <h3 className="text-2xl font-semibold mb-2 text-foreground">{t('about.formation.title')}</h3>
               <p className="text-sm text-muted-foreground mb-8">{t('about.formation.university')}</p>
               
-              <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+              <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
                 {/* Grado en Ingeniería Informática */}
-                <div className="flex flex-col h-full">
-                  <div className="flex items-start gap-3 mb-6">
+                <div>
+                  <div className="flex items-start gap-3 mb-6 min-h-[72px]">
                     <div className="p-3 bg-primary rounded-lg flex-shrink-0">
                       <Laptop className="w-6 h-6 text-primary-foreground" />
                     </div>
@@ -95,41 +95,39 @@ const About = () => {
                     </div>
                   </div>
                   
-                  <div className="mt-auto">
-                    <Accordion type="single" collapsible className="w-full">
-                    <AccordionItem value="informatica-skills" className="border-none">
-                      <AccordionTrigger className="text-sm font-medium hover:no-underline py-3 px-4 bg-muted rounded-lg hover:bg-muted/80 transition-colors">
-                        {t('about.formation.skills')}
-                      </AccordionTrigger>
-                      <AccordionContent className="pt-4 space-y-4">
-                        <div>
-                          <h5 className="font-semibold text-foreground mb-1">{t('about.formation.cs.skill1.title')}</h5>
-                          <p className="text-sm text-muted-foreground">{t('about.formation.cs.skill1.desc')}</p>
-                        </div>
-                        
-                        <div>
-                          <h5 className="font-semibold text-foreground mb-1">{t('about.formation.cs.skill2.title')}</h5>
-                          <p className="text-sm text-muted-foreground">{t('about.formation.cs.skill2.desc')}</p>
-                        </div>
-                        
-                        <div>
-                          <h5 className="font-semibold text-foreground mb-1">{t('about.formation.cs.skill3.title')}</h5>
-                          <p className="text-sm text-muted-foreground">{t('about.formation.cs.skill3.desc')}</p>
-                        </div>
-                        
-                        <div>
-                          <h5 className="font-semibold text-foreground mb-1">{t('about.formation.cs.skill4.title')}</h5>
-                          <p className="text-sm text-muted-foreground">{t('about.formation.cs.skill4.desc')}</p>
-                        </div>
-                      </AccordionContent>
-                    </AccordionItem>
-                    </Accordion>
-                  </div>
+                  <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="informatica-skills" className="border-none">
+                    <AccordionTrigger className="text-sm font-medium hover:no-underline py-3 px-4 bg-muted rounded-lg hover:bg-muted/80 transition-colors">
+                      {t('about.formation.skills')}
+                    </AccordionTrigger>
+                    <AccordionContent className="pt-4 space-y-4">
+                      <div>
+                        <h5 className="font-semibold text-foreground mb-1">{t('about.formation.cs.skill1.title')}</h5>
+                        <p className="text-sm text-muted-foreground">{t('about.formation.cs.skill1.desc')}</p>
+                      </div>
+                      
+                      <div>
+                        <h5 className="font-semibold text-foreground mb-1">{t('about.formation.cs.skill2.title')}</h5>
+                        <p className="text-sm text-muted-foreground">{t('about.formation.cs.skill2.desc')}</p>
+                      </div>
+                      
+                      <div>
+                        <h5 className="font-semibold text-foreground mb-1">{t('about.formation.cs.skill3.title')}</h5>
+                        <p className="text-sm text-muted-foreground">{t('about.formation.cs.skill3.desc')}</p>
+                      </div>
+                      
+                      <div>
+                        <h5 className="font-semibold text-foreground mb-1">{t('about.formation.cs.skill4.title')}</h5>
+                        <p className="text-sm text-muted-foreground">{t('about.formation.cs.skill4.desc')}</p>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                  </Accordion>
                 </div>
                 
                 {/* Grado en Ingeniería de Sistemas de Telecomunicación */}
-                <div className="flex flex-col h-full">
-                  <div className="flex items-start gap-3 mb-6">
+                <div>
+                  <div className="flex items-start gap-3 mb-6 min-h-[72px]">
                     <div className="p-3 bg-accent rounded-lg flex-shrink-0">
                       <Signal className="w-6 h-6 text-accent-foreground" />
                     </div>
@@ -138,36 +136,34 @@ const About = () => {
                     </div>
                   </div>
                   
-                  <div className="mt-auto">
-                    <Accordion type="single" collapsible className="w-full">
-                    <AccordionItem value="telecos-skills" className="border-none">
-                      <AccordionTrigger className="text-sm font-medium hover:no-underline py-3 px-4 bg-muted rounded-lg hover:bg-muted/80 transition-colors">
-                        {t('about.formation.skills')}
-                      </AccordionTrigger>
-                      <AccordionContent className="pt-4 space-y-4">
-                        <div>
-                          <h5 className="font-semibold text-foreground mb-1">{t('about.formation.telecom.skill1.title')}</h5>
-                          <p className="text-sm text-muted-foreground">{t('about.formation.telecom.skill1.desc')}</p>
-                        </div>
-                        
-                        <div>
-                          <h5 className="font-semibold text-foreground mb-1">{t('about.formation.telecom.skill2.title')}</h5>
-                          <p className="text-sm text-muted-foreground">{t('about.formation.telecom.skill2.desc')}</p>
-                        </div>
-                        
-                        <div>
-                          <h5 className="font-semibold text-foreground mb-1">{t('about.formation.telecom.skill3.title')}</h5>
-                          <p className="text-sm text-muted-foreground">{t('about.formation.telecom.skill3.desc')}</p>
-                        </div>
-                        
-                        <div>
-                          <h5 className="font-semibold text-foreground mb-1">{t('about.formation.telecom.skill4.title')}</h5>
-                          <p className="text-sm text-muted-foreground">{t('about.formation.telecom.skill4.desc')}</p>
-                        </div>
-                      </AccordionContent>
-                    </AccordionItem>
-                    </Accordion>
-                  </div>
+                  <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="telecos-skills" className="border-none">
+                    <AccordionTrigger className="text-sm font-medium hover:no-underline py-3 px-4 bg-muted rounded-lg hover:bg-muted/80 transition-colors">
+                      {t('about.formation.skills')}
+                    </AccordionTrigger>
+                    <AccordionContent className="pt-4 space-y-4">
+                      <div>
+                        <h5 className="font-semibold text-foreground mb-1">{t('about.formation.telecom.skill1.title')}</h5>
+                        <p className="text-sm text-muted-foreground">{t('about.formation.telecom.skill1.desc')}</p>
+                      </div>
+                      
+                      <div>
+                        <h5 className="font-semibold text-foreground mb-1">{t('about.formation.telecom.skill2.title')}</h5>
+                        <p className="text-sm text-muted-foreground">{t('about.formation.telecom.skill2.desc')}</p>
+                      </div>
+                      
+                      <div>
+                        <h5 className="font-semibold text-foreground mb-1">{t('about.formation.telecom.skill3.title')}</h5>
+                        <p className="text-sm text-muted-foreground">{t('about.formation.telecom.skill3.desc')}</p>
+                      </div>
+                      
+                      <div>
+                        <h5 className="font-semibold text-foreground mb-1">{t('about.formation.telecom.skill4.title')}</h5>
+                        <p className="text-sm text-muted-foreground">{t('about.formation.telecom.skill4.desc')}</p>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                  </Accordion>
                 </div>
               </div>
             </CardContent>
