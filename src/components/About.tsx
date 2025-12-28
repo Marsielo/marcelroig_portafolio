@@ -84,8 +84,8 @@ const About = () => {
               
               <div className="grid md:grid-cols-2 gap-8 md:gap-12">
                 {/* Grado en Ingeniería Informática */}
-                <div className="space-y-6">
-                  <div className="flex items-start gap-3">
+                <div className="flex flex-col h-full">
+                  <div className="flex items-start gap-3 mb-6">
                     <div className="p-3 bg-primary rounded-lg flex-shrink-0">
                       <Laptop className="w-6 h-6 text-primary-foreground" />
                     </div>
@@ -95,7 +95,8 @@ const About = () => {
                     </div>
                   </div>
                   
-                  <Accordion type="single" collapsible className="w-full">
+                  <div className="mt-auto">
+                    <Accordion type="single" collapsible className="w-full">
                     <AccordionItem value="informatica-skills" className="border-none">
                       <AccordionTrigger className="text-sm font-medium hover:no-underline py-3 px-4 bg-muted rounded-lg hover:bg-muted/80 transition-colors">
                         {t('about.formation.skills')}
@@ -122,12 +123,13 @@ const About = () => {
                         </div>
                       </AccordionContent>
                     </AccordionItem>
-                  </Accordion>
+                    </Accordion>
+                  </div>
                 </div>
                 
                 {/* Grado en Ingeniería de Sistemas de Telecomunicación */}
-                <div className="space-y-6">
-                  <div className="flex items-start gap-3">
+                <div className="flex flex-col h-full">
+                  <div className="flex items-start gap-3 mb-6">
                     <div className="p-3 bg-accent rounded-lg flex-shrink-0">
                       <Signal className="w-6 h-6 text-accent-foreground" />
                     </div>
@@ -136,7 +138,8 @@ const About = () => {
                     </div>
                   </div>
                   
-                  <Accordion type="single" collapsible className="w-full">
+                  <div className="mt-auto">
+                    <Accordion type="single" collapsible className="w-full">
                     <AccordionItem value="telecos-skills" className="border-none">
                       <AccordionTrigger className="text-sm font-medium hover:no-underline py-3 px-4 bg-muted rounded-lg hover:bg-muted/80 transition-colors">
                         {t('about.formation.skills')}
@@ -163,7 +166,8 @@ const About = () => {
                         </div>
                       </AccordionContent>
                     </AccordionItem>
-                  </Accordion>
+                    </Accordion>
+                  </div>
                 </div>
               </div>
             </CardContent>
