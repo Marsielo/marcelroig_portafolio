@@ -50,8 +50,8 @@ const Projects = () => {
                     src={project.image}
                     alt={`Logo de ${project.name}`}
                     className={`w-full h-full object-contain transition-all duration-700 group-hover:rotate-[360deg] ${
-                      index === 1 || index === 2 ? 'scale-150' : ''
-                    }`}
+                      index === 1 ? 'scale-150' : ''
+                    } ${index === 2 ? 'scale-90 dark:invert' : ''}`}
                   />
                 </div>
               </div>
