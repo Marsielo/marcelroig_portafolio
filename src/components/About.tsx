@@ -192,15 +192,26 @@ const About = () => {
                   </a>
                   {t('about.music.desc2.after')}
                 </p>
-                <a
-                  href="https://www.youtube.com/@seasky13"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 px-4 py-2.5 bg-muted/50 hover:bg-muted border border-border rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105"
-                >
-                  <Youtube className="w-5 h-5 text-red-600" />
-                  <span className="text-foreground">{t('about.music.youtube')}</span>
-                </a>
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href="https://www.youtube.com/@seasky13"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 px-4 py-2.5 bg-muted/50 hover:bg-muted border border-border rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105"
+                  >
+                    <Youtube className="w-5 h-5 text-red-600" />
+                    <span className="text-foreground">{t('about.music.youtube')}</span>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/_seasky24_/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 px-4 py-2.5 bg-muted/50 hover:bg-muted border border-border rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105"
+                  >
+                    <Instagram className="w-5 h-5 text-pink-600" />
+                    <span className="text-foreground">{t('about.music.instagram')}</span>
+                  </a>
+                </div>
               </div>
             </CardContent>
           </Card>
