@@ -40,9 +40,7 @@ const Hero = () => {
           <p className="text-xl md:text-2xl mb-4 text-white/90 dark:text-white/90 max-w-3xl mx-auto">
             {t('hero.subtitle')}
           </p>
-          <p className="text-lg md:text-xl mb-2 text-white/80 dark:text-white/80 max-w-3xl mx-auto">
-            {t('hero.tagline')}
-          </p>
+          
           
           <div className="flex gap-4 justify-center flex-wrap mt-8">
             <button
