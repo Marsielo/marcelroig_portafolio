@@ -29,7 +29,7 @@ const translations = {
     // About
     'about.title': 'Sobre mí',
     'about.name': 'Marcel Roig Gil',
-    'about.age': '21 años',
+    'about.age': '22 años',
     'about.download.cv': 'Descargar CV',
     'about.intro': 'Mi vida y mis aspiraciones trascienden lo académico. Ante todo, soy un amante del conocimiento, la ciencia y el arte, además de un músico y deportista nato. Poseo sólidas habilidades comunicativas, así como un carácter poético y perfeccionista que guía todo lo que emprendo.',
     'about.quote': 'La curiosidad es mi brújula; la disciplina, mi camino.',
@@ -126,7 +126,7 @@ const translations = {
     // About
     'about.title': 'About Me',
     'about.name': 'Marcel Roig Gil',
-    'about.age': '21 years old',
+    'about.age': '22 years old',
     'about.download.cv': 'Download CV',
     'about.intro': 'My life and aspirations transcend academics. Above all, I am a lover of knowledge, science, and art, as well as a natural musician and athlete. I possess strong communication skills and a poetic, perfectionist character that guides everything I undertake.',
     'about.quote': 'Curiosity is my compass; discipline, my path.',

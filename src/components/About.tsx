@@ -277,7 +277,13 @@ const About = () => {
                     </div>
                     <div className="flex items-center justify-between py-3 px-4 bg-muted/30 rounded-lg">
                       <span className="font-medium text-foreground">{t('about.others.languages.english')}</span>
-                      <span className="text-sm text-muted-foreground font-medium">{t('about.others.languages.intermediate')}</span>
+                      <a
+                        href="/Oxford_B2_Certificate.pdf"
+                        download="Oxford_B2_Certificate.pdf"
+                        className="text-sm text-primary hover:text-primary/80 font-medium underline underline-offset-2 transition-colors"
+                      >
+                        B2 (Oxford)
+                      </a>
                     </div>
                   </div>
                 </div>
